@@ -42,6 +42,10 @@ Here's the generated output from the login form above:
 </html>
 ```
 
+The rendered form, without CSS styling applied:
+
+![loginform](img/loginform.png)
+
 ## Features and limitations
 
 * If the input ID starts with `password` or `pwd`, then the input type `"password"` is used.
