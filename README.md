@@ -39,12 +39,13 @@ Here's the generated output from the above form file:
 </html>
 ```
 
-## SimpleForm elements
+## Features and limitations
 
 * If the input ID starts with `password` or `pwd`, then the input type `"password"` is used.
 * Multiple buttons can be provided on a single line.
 * All text that is not recognized as either the title or as form elements is combined and returned in a `<p>` tag.
 * If `[[` and `]]` are used instead of `{{` and `}}`, then a multi-line text input box is created instead.
+* Check boxes and radio buttons are not supported yet.
 
 ## General Info
 
