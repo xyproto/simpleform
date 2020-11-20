@@ -1,6 +1,6 @@
 Login
 
-Here you can log in. Welcome!
+Welcome dear user!
 
 Username: {{ username }}
 Password: {{ password }}
