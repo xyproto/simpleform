@@ -2,9 +2,9 @@
 
 [![Build Status](https://travis-ci.com/xyproto/simpleform.svg?branch=main)](https://travis-ci.com/xyproto/simpleform) [![GoDoc](https://godoc.org/github.com/xyproto/simpleform?status.svg)](http://godoc.org/github.com/xyproto/simpleform) [![Go Report Card](https://goreportcard.com/badge/github.com/xyproto/simpleform)](https://goreportcard.com/report/github.com/xyproto/simpleform)
 
-SimpleForm is a language for constructing HTML forms out of very little text.
+SimpleForm is a language for constructing HTML forms out of small amounts of text.
 
-Here's a simple login form:
+Here's a sample login form:
 
 ```elm
 Login
