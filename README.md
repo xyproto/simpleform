@@ -20,8 +20,9 @@ Password: {{ password }}
 * The first line is recognized as the title, and is used both for the title (like this: `<title>Login</title>` and as a title in the body, like this: `<h2>Login</h2>`.
 * The lines with `{{` and `}}` are recognized as single line input fields, where the label is the word before `:`.
 * The `[Login](/login)` is recognized as a button that can submit the contents of the form as a POST request to `/login`.
+* The syntax is inspired by `Jinja2` and `Markdown`.
 
-Here's the generated output from the above form file:
+Here's the generated output from the login form above:
 
 ```html
 <!doctype html>
