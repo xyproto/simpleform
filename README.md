@@ -4,7 +4,7 @@ SimpleForm is a language for constructing HTML forms out of very little text.
 
 Here's a simple login form:
 
-```markdown
+```css
 Login
 
 Welcome dear user!
@@ -39,9 +39,12 @@ Here's the generated output from the above form file:
 </html>
 ```
 
+## SimpleForm elements
+
 * If the input ID starts with `password` or `pwd`, then the input type `"password"` is used.
 * Multiple buttons can be provided on a single line.
 * All text that is not recognized as either the title or as form elements is combined and returned in a `<p>` tag.
+* If `[[` and `]]` are used instead of `{{` and `}}`, then a multi-line text input box is created instead.
 
 ## General Info
 
