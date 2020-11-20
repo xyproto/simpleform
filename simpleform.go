@@ -23,6 +23,12 @@ func stripBothSides(s, left, right string) string {
 	return strings.TrimSpace(strings.TrimSuffix(trimmed, right))
 }
 
+func startForm(body *strings.Builder) {
+	if !strings.Contains((*body).String(), "<form") {
+		(*body).WriteString("<form method=\"POST\">")
+	}
+}
+
 // HTML transforms the contents of a .frm file to a HTML form
 //
 // Example use:
@@ -86,9 +92,7 @@ func HTML(frmContents string, entireDocument bool, options ...string) (string, e
 	for _, line := range lines {
 		trimmedLine := strings.TrimSpace(line)
 		if strings.Contains(trimmedLine, "{{") { // text field
-			if !strings.Contains(body.String(), "<form") {
-				body.WriteString("<form method=\"POST\">")
-			}
+			startForm(&body)
 			if strings.Contains(trimmedLine, ":") {
 				fields := strings.SplitN(trimmedLine, ":", 2)
 				label := html.EscapeString(fields[0])
@@ -105,21 +109,20 @@ func HTML(frmContents string, entireDocument bool, options ...string) (string, e
 				return "", fmt.Errorf("unrecognized input field description: %s", trimmedLine)
 			}
 		} else if strings.Contains(trimmedLine, "[[") { // multiline text field
-			if !strings.Contains(body.String(), "<form>") {
-				body.WriteString("<form>")
-			}
+			startForm(&body)
 			if strings.Contains(trimmedLine, ":") {
 				fields := strings.SplitN(trimmedLine, ":", 2)
 				label := html.EscapeString(fields[0])
 				inputField := fields[1]
 				fieldName := stripBothSides(inputField, "[[", "]]")
 				body.WriteString("<label for=\"" + fieldName + "\">" + label + ":" + "</label>")
-				body.WriteString(fmt.Sprintf("<textarea name=\"%s\" cols=\"%d\" rows=\"%d\"></textarea><br><br>", fieldName, MultilineColumns, MultilineRows))
+				body.WriteString(fmt.Sprintf("<textarea name=\"%s\" cols=\"%d\" rows=\"%d\"></textarea>", fieldName, MultilineColumns, MultilineRows))
 			} else {
 				return "", fmt.Errorf("unrecognized multiline input field description: %s", trimmedLine)
 			}
-
+			body.WriteString("<br><br>")
 		} else if strings.Contains(trimmedLine, "](") { // one or more buttons
+			startForm(&body)
 			buttons := strings.Split(trimmedLine, ")")
 			for _, button := range buttons {
 				labelAndLink := strings.TrimSpace(button)
