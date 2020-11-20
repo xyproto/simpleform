@@ -1,12 +1,10 @@
-# SimpleForm
+# SimpleForm [![Build Status](https://travis-ci.com/xyproto/simpleform.svg?branch=master)](https://travis-ci.com/xyproto/simpleform) [![GoDoc](https://godoc.org/github.com/xyproto/simpleform?status.svg)](http://godoc.org/github.com/xyproto/simpleform) [![Go Report Card](https://goreportcard.com/badge/github.com/xyproto/simpleform)](https://goreportcard.com/report/github.com/xyproto/simpleform)
 
 SimpleForm is a language for constructing HTML forms out of very little text.
 
-The conversion is fast enough to happen on the fly, when serving HTML pages.
-
 Here's a simple login form:
 
-```template
+```markdown
 Login
 
 Welcome dear user!
