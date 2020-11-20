@@ -140,7 +140,7 @@ func HTML(frmContents string, entireDocument bool, options ...string) (string, e
 				return "", errors.New("empty title")
 			}
 			shtml.WriteString("<title>" + html.EscapeString(trimmedLine) + "</title>")
-			title.WriteString("<h1>" + html.EscapeString(trimmedLine) + "</h1>")
+			title.WriteString("<h2>" + html.EscapeString(trimmedLine) + "</h2>")
 			first = false
 		} else {
 			text.WriteString(line)

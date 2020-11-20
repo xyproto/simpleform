@@ -7,7 +7,7 @@ Here's a simple login form:
 ```elm
 Login
 
-Here you can log in. Welcome!
+Welcome dear user!
 
 Username: {{ username }}
 Password: {{ password }}
@@ -15,7 +15,7 @@ Password: {{ password }}
 [Login](/login)
 ```
 
-* The first line is recognized as the title, and is used both for the title (like this: `<title>Login</title>` and as a title in the body, like this: `<h1>Login</h1>`.
+* The first line is recognized as the title, and is used both for the title (like this: `<title>Login</title>` and as a title in the body, like this: `<h2>Login</h2>`.
 * The lines with `{{` and `}}` are recognized as single line input fields, where the label is the word before `:`.
 * The `[Login](/login)` is recognized as a button that can submit the contents of the form as a POST request to `/login`.
 
@@ -28,8 +28,8 @@ Here's the generated output from the above form file:
     <title>Login</title>
   </head>
   <body>
-    <h1>Login</h1>
-    <p>Here you can log in. Welcome!</p>
+    <h2>Login</h2>
+    <p>Welcome dear user!</p>
     <form method="POST">
       <label for="username">Username:</label><input type="text" id="username" name="username"><br><br>
       <label for="password">Password:</label><input type="password" id="password" name="password"><br><br>
