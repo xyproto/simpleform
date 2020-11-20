@@ -7,7 +7,7 @@ Here's a simple login form:
 ```css
 Login
 
-Welcome dear user!
+Here you can log in. Welcome!
 
 Username: {{ username }}
 Password: {{ password }}
