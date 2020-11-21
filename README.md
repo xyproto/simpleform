@@ -1,4 +1,4 @@
-# :bento: SimpleForm
+# :large_orange_diamond: SimpleForm
 
 [![Build Status](https://travis-ci.com/xyproto/simpleform.svg?branch=main)](https://travis-ci.com/xyproto/simpleform) [![GoDoc](https://godoc.org/github.com/xyproto/simpleform?status.svg)](http://godoc.org/github.com/xyproto/simpleform) [![Go Report Card](https://goreportcard.com/badge/github.com/xyproto/simpleform)](https://goreportcard.com/report/github.com/xyproto/simpleform)
 
