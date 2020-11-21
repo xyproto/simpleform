@@ -39,6 +39,9 @@ func startForm(body *strings.Builder) {
 //   Return just the body of the HTML document, using the default values of the rest:
 //     HTML(frmContents, false)
 //
+//   Return HTML styled by MPV.CSS:
+//     HTML(frmContents, true, "en", "https://unpkg.com/mvp.css")
+//
 // If entireDocument is true, doctype + html + head + body is returned, and not just the body contents.
 //
 // The optional parameter can be from 0 to 3 strings with:
