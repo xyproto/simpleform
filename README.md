@@ -57,7 +57,13 @@ When styled with [MVP.CSS](https://andybrewer.github.io/mvp/), this is how it lo
 * Multiple buttons can be provided on a single line.
 * All text that is not recognized as either the title or as form elements is combined and returned in a `<p>` tag.
 * If `[[` and `]]` are used instead of `{{` and `}}`, then a multi-line text input box is created instead.
-* Check boxes and radio buttons are not supported yet.
+
+# TODO
+
+* Formal spec (or at least a PDF describing the language).
+* Radio button support, with options separated by `|`.
+* Support for required fields, by using the exclamation mark.
+* Spport all available form elements, while keeping complexity low.
 
 ## General Info
 
