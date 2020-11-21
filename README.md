@@ -2,9 +2,9 @@
 
 [![Build Status](https://travis-ci.com/xyproto/simpleform.svg?branch=main)](https://travis-ci.com/xyproto/simpleform) [![GoDoc](https://godoc.org/github.com/xyproto/simpleform?status.svg)](http://godoc.org/github.com/xyproto/simpleform) [![Go Report Card](https://goreportcard.com/badge/github.com/xyproto/simpleform)](https://goreportcard.com/report/github.com/xyproto/simpleform)
 
-SimpleForm is a language for constructing HTML forms out of small amounts of text.
+SimpleForm is a language for constructing HTML forms out of very little text.
 
-Here's a sample login form:
+Take this simple login form:
 
 ```ruby
 Login
@@ -42,7 +42,11 @@ Here's the generated output from the login form above:
 </html>
 ```
 
-The rendered form, without CSS styling applied:
+This looks like this when styled with the [MVP.CSS](https://andybrewer.github.io/mvp/) stylesheet:
+
+![loginform_styled](img/loginform_styled.png)
+
+Or like this, unstyled:
 
 ![loginform](img/loginform.png)
 
