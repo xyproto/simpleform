@@ -6,7 +6,7 @@ SimpleForm is a language for constructing HTML forms out of small amounts of tex
 
 Here's a sample login form:
 
-```elm
+```ruby
 Login
 
 Welcome dear user!
