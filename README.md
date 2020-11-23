@@ -4,7 +4,7 @@
 
 SimpleForm is a language for constructing HTML forms out of very little text.
 
-Here is an example login form:
+Here is an example of a form definition:
 
 
 ```ruby
