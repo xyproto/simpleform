@@ -67,6 +67,6 @@ When styled with [MVP.CSS](https://andybrewer.github.io/mvp/), this is how it lo
 
 ## General Info
 
-* Version: 0.1.0
+* Version: 0.2.0
 * License: MIT
 * Author: Alexander F. Rødseth &lt;xyproto@archlinux.org&gt;

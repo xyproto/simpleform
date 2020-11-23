@@ -8,7 +8,7 @@ import (
 )
 
 // VersionString is the current name and version of this package
-const VersionString = "SimpleForm 0.1.0"
+const VersionString = "SimpleForm 0.2.0"
 
 var (
 	// MultilineColumns is the number of columns that multiline input text should have
